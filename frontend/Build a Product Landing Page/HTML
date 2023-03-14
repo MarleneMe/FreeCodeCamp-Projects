@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device.width, initial-scale=1.0">
+        <title>Product Landing Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header id="header">
+            <img id="header-img" style="width:auto; height:12vh;" src="https://media.istockphoto.com/id/939144958/vector/guitar-stylized-icon-vector-simple-lines-acoustic-guitar-design-element.jpg?s=612x612&w=0&k=20&c=KOw-qKVwYAPgriQq4svN10gdHbzItr3bzQLLdXumops=">
+            <h2 id="title">Personalised Guitars</h2>
+            <nav id="nav-bar">
+                <a class="nav-link" href="#info-sec">Info</a>
+                <a class="nav-link" href="#video-sec">Video</a>
+                <a class="nav-link" href="#form-sec">Form</a>
+            </nav>
+        </header>
+        <section id="info-sec">
+            <h2>Check out our guitars</h2>
+<p>There are many different forms of guitars. A bass could be considered a guitar. There are accoustic and electroinic guitars.</p><p> In case you are unsure which guitar is the best fit for you, feel free to watch the following embedded video to get some ideas.</p>
+        </section>
+        <section id="video-sec">
+            <h2>Video</h2>
+            <p>See the following video for further information.</p>
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/i2dLy7nKPn8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+        </section>
+        <section id="form-sec">
+            <h2>Form</h2>
+            <p>Please fill out the following short form so we can send you more information about your preferred style of guitars. </p>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <label>Choose a style: </label> 
+        <select name="style" id="style">
+  <option value="accoustic-guitar">Accoustic (guitar)</option>
+  <option value="e-guitar">E-guitar</option>
+  <option value="accoustic-bass">Bass (accoustic)</option>
+  <option value="e-bass">Bass (electronic)</option>
+</select>       <label>Email-address: <input id="email" name="email" type="email" placeholder="Your email-address"></label>
+                <input id="submit" type="submit" value="Submit Form" href="https://www.freecodecamp.com/email-submit">
+            </form>
+        </section>
+    </body>
+</html>
