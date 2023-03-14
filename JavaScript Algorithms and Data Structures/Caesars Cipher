@@ -1,0 +1,13 @@
+function rot13(str) {
+  let abc = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+  let arr = str.split("");
+  for (let i=0; i<arr.length; i++){
+    if (abc.indexOf(arr[i]) != -1){
+      arr[i] = abc[(abc.indexOf(arr[i])+13) % 26]
+    }
+  }
+  return arr.join("");
+}
+
+rot13("SERR PBQR PNZC");
+
