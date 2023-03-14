@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Technical Documentation</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Site Navigation</header>
+      <ul>
+        <li><a href="#Introduction" class="nav-link">Introduction</a></li>
+<li><a href="#The_Zen_of_Python" class="nav-link">The Zen of Python</a></li>
+<li><a href="#Variable_Declaration" class="nav-link">Variable Declaration</a></li>
+<li><a href="#If-Statements" class="nav-link">If-Statements</a></li>
+<li><a href="#For-Loops" class="nav-link">For-Loops</a></li>
+       </ul> 
+    </nav>  
+    <main id="main-doc">
+      <h1>Python Technical Documentation</h1>
+
+
+
+      <section id="Introduction" class="main-section">
+        <header>Introduction</header>
+        <p>Python consistently ranks as one of the most popular programming languages. Python's developers aim for it to be fun to use. This is reflected in its name - a tribute to the British comedy group Monty Python.<br /> 
+      <br /></p><p>   
+Python is a high-level, general-purpose programming language. Its design philosophy emphasizes code readability with the use of significant indentation. <br />
+<br /></p><p>   
+Python is dynamically-typed and garbage-collected. It supports multiple programming paradigms: <br />
+Object-oriented programming and structured programming are fully supported, <br />
+and many of their features support functional programming and aspect-oriented programming (including metaprogramming and metaobjects). <br />
+Many other paradigms are supported via extensions, including design by contract and logic programming.</p>
+      </section>
+
+
+
+      <section id="The_Zen_of_Python" class="main-section">
+        <header>The Zen of Python</header>
+        <p>Python has a core Philosophy:
+          <ul class="zen list">
+            <li class="zen element">Beautiful is better than ugly.</li>
+            <li class="zen element">Explicit is better than implicit.</li>
+            <li class="zen element">Simple is better than complex.</li>
+            <li class="zen element">Complex is better than complicated.</li>
+            <li class="zen element">Readability counts.</li>
+          </ul>
+        </p>
+      </section>
+
+
+
+      <section id="Variable_Declaration" class="main-section">
+        <header>Variable Declaration</header>
+        <p>Variables are declared by simply assigning a value to them. In some packages like SAGE, which is Python based and used mostly for mathematics, you can even have formal variables. Variables in Python do not need to be declared with a specific type and can even change types. Variables with a string value are however case sensitive.
+        </p>
+        <pre>
+          <code class="language-python">
+x = 3;
+print(x);
+x = "Hello World";
+print(x);
+          </code>
+3
+Hello World
+        </pre>
+        <p>You can also concatenate Strings.</p>
+        <pre>
+          <code class="language-python">
+x = "A" + 3 * "r" + "g" + 3 * "h"
+print(x) 
+print("The Legendary Black Beast of " + x)
+          </code>
+Arrrghhh
+The Legendary Black Beast of Arrrghhh
+        </pre>
+      </section>
+
+
+
+      <section id="If-Statements" class="main-section">
+<header>If-Statements</header>
+        <p>You can also use <span class="code">if/elif/else</span>-Statements to check which condition (that evaluates to a boolean value) evaluates to <span class="code">True</span>.
+        </p>
+         <pre><code class="language-python">
+x = int(input("Please enter an integer: "))
+          </code>
+Please enter an integer: 42
+<code class="language-python">
+if x < 0:
+  int(input("The number you provided was negative and not an integer. Please try again: "))
+elif x == 0:
+  print("Zero")
+else:
+ print("Congratulations! You entered an integer! Your integer is " + x + "!")
+          </code>
+Congratulations! You entered an integer! Your integer is 42!
+        </pre>
+      </section>
+
+
+
+      <section id="For-Loops" class="main-section">
+<header>For-Loops</header>
+        <p>The <span class="code">for</span>-Loops are used to iterate through a range or an array. For a range-example see:
+        </p>
+        <pre><code class="language-python">
+sum = 0
+for i in range(10):
+  sum += i
+  print(sum)
+          </code>
+0
+1
+3
+6
+10
+15
+21
+28
+36
+45
+        </pre>
+        <p>For an array-example see: 
+        </p>
+        <pre><code class="language-python">
+array = ["dog", "cat", "horse", "fish", "cow"]
+for animal in array:
+  if animal[0] == "c":
+    print(animal)
+          </code>
+cat
+cow
+        </pre>
+      </section>
+      <footer>Some of the information on this page is taken from <a href="https://en.wikipedia.org/wiki/Python_(programming_language)">the Python wikipedia page</a>.</footer>
+    </main>
+    
+  </body>
+  
+</html>
