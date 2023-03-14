@@ -1,0 +1,134 @@
+:root {
+  --header-color1: #241e20;
+  --header-color2: #78646a;
+  --background-color: #4e4145; 
+  --pink-orange:  #ff3f44;
+  --green-blue: #07d597;
+  --aperol: #ff6a3f;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  background: linear-gradient(45deg, var(--header-color1) 0%, var(--header-color1) 75%, var(--header-color2) 100%);
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding: 5px;
+}
+
+#title {
+  
+  align-content: center;
+  justify-content: center;
+  position: relative;
+
+}
+
+.neon {
+  font-family: Bradley Hand, Cursive;
+  color: var(--pink-orange);
+  text-shadow:
+      0 0 7px var(--pink-orange),
+      0 0 10px var(--pink-orange),
+      0 0 21px var(--pink-orange),
+      0 0 42px var(--aperol),
+      0 0 82px var(--aperol),
+      0 0 92px var(--aperol),
+      0 0 102px var(--aperol),
+      0 0 151px var(--aperol);
+}
+
+#navbar {
+  position: absolute;
+  top: 5px;
+  right: 30px;
+}
+
+.nav-link {
+  font-family: Verdana, sans-serif;
+  text-decoration: none;
+  color: var(--aperol);
+}
+
+section {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcome-section {
+  top: 10vh;
+}
+
+#welcome-section, #contact {
+  
+  height: 98vh;
+  background-color: var(--header-color1);
+}
+
+#projects {
+  background-color: var(--background-color);
+}
+
+.shaky {
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+
+      text-shadow:
+      0 0 7px var(--pink-orange),
+      0 0 10px var(--pink-orange),
+      0 0 21px var(--pink-orange),
+      0 0 42px var(--aperol),
+      0 0 82px var(--aperol),
+      0 0 92px var(--aperol),
+      0 0 102px var(--aperol),
+      0 0 151px var(--aperol);
+  
+  }
+  
+  20%, 24%, 55% {        
+      text-shadow: none;
+  }    
+}
+
+p {
+  color: var(--aperol);
+  font-family: Courier New, Monospace;
+}
+
+.tiles-grid {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+
+.image {
+  width: 40vw;
+  height: 20vh;
+}
+
+@media (max-width: 560px)
+{
+  iframe {
+    width: 90vw;
+  }
+}
