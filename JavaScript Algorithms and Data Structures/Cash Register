@@ -1,0 +1,71 @@
+function checkCashRegister(price, cash, pcid) {
+  let cid = JSON.parse(JSON.stringify(pcid));
+  let x = cash-price;
+  let change = [];
+  let status = "";
+  let cv = {
+    "PENNY": 0.01,
+    "NICKEL": 0.05,
+    "DIME": 0.1,
+    "QUARTER": 0.25,
+    "ONE": 1,
+    "FIVE": 5,
+    "TEN": 10,
+    "TWENTY": 20,
+    "ONE HUNDRED": 100
+  }
+
+
+  let iseq = function(arr1, arr2){
+    let arr3 = [];
+    for (let h = 0; h < arr2.length; h++){
+      if (arr2[h][1] > 0){
+        arr3.push(arr2[h]);
+      }
+    }
+    if (arr1.length != arr3.length){
+      return false
+    }
+    let boolean = true
+    for (let i = 0 ; i < arr1.length; i++){
+      boolean = boolean && arr1[i][0] == arr3[i][0] && arr1[i][1] == arr3[i][1]
+    }
+    return boolean;
+  }
+
+
+  while (x > 0) {
+    let found = false;
+    for (let i = cid.length -1 ; i >-1; i--){
+      let val = cv[cid[i][0]];
+      if (val <= x && cid[i][1] > 0){
+        let times = Math.min(Math.floor(x / val + 0.0000001), cid[i][1] / val);
+        x -= val*times;
+        cid[i][1] -= val*times;
+        change.push([cid[i][0], val*times]);
+        found = true;
+        break;
+      }
+    }
+    if (!found){ 
+    status = "INSUFFICIENT_FUNDS";
+    change = []
+    break;
+    }
+    
+    else if (x < 0.01){
+      if (iseq(change, pcid)){
+        status = "CLOSED";
+        change = pcid
+      }
+      else{
+      status = "OPEN";
+      }
+      break;
+    }  
+  }
+
+  return {"status": status, "change": change};
+}
+
+checkCashRegister(19.5, 20, [["PENNY", 0.5], ["NICKEL", 0], ["DIME", 0], ["QUARTER", 0], ["ONE", 0], ["FIVE", 0], ["TEN", 0], ["TWENTY", 0], ["ONE HUNDRED", 0]])
