@@ -1,0 +1,20 @@
+import numpy as np
+
+def calculate(list):
+    if len(list) == 9:
+  
+      nparr = np.array(list)
+      nparrc = np.copy(nparr)
+      nparrc = nparrc.reshape(3,3)
+      
+      calculations = {
+        'mean': [nparrc.mean(axis=0).tolist(), nparrc.mean(axis=1).tolist(), nparr.mean()],
+        'variance': [nparrc.var(axis=0).tolist(), nparrc.var(axis=1).tolist(), nparr.var()],
+        'standard deviation': [nparrc.std(axis=0).tolist(), nparrc.std(axis=1).tolist(), nparr.std()],
+        'max': [nparrc.max(axis=0).tolist(), nparrc.max(axis=1).tolist(), nparr.max()],
+        'min': [nparrc.min(axis=0).tolist(), nparrc.min(axis=1).tolist(), nparr.min()],
+        'sum': [nparrc.sum(axis=0).tolist(), nparrc.sum(axis=1).tolist(), nparr.sum()]
+      }
+      return calculations
+    else: 
+        raise ValueError("List must contain nine numbers.")
