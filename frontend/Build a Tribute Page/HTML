@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Stanislav Petrov Tribute Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main id="main">
+      <h1 id="title" class="title">Stanislav Petrov Tribute Page<h1>
+      <h2 id="subtitle" class="subtitle">
+        The man who saved the world</h2>
+      
+      <figure id="img-div">
+        <img id="image" src="https://static01.nyt.com/images/2017/09/19/world/19Petrov/19Petrov-superJumbo.jpg?quality=75&auto=webp" />
+      <figcaption id="img-caption">Stanislav Petrov in Dresden, Germany, in 2013.<br />
+      Credit: Oliver Killig/European Pressphoto Agency</figcaption>
+      </figure>
+      <p id="tribute-info"><span class="imp">Stanislav Yevgrafovich Petrov</span> (Russian: Станисла́в Евгра́фович Петро́в) played a <span class="imp">key role in the Soviet nuclear false alarm incident on 26 September 1983</span>. Petrov was the duty officer at the command center for the Oko <span class="imp">nuclear early-warning system</span> when the <span class="imp">system reported that upto six missiles</span> had been launched from the United States. <span class="imp">Petrov judged the reports to be a false alarm thus preventing a nuclear war.</span>
+</p>
+    <ul>
+      <li><strong class="strong">1939</strong> - born on 7 September near Vladivostok to a military pilot father and nurse mother</li>
+      <li><strong class="strong">1972</strong> - graduated from Kyiv Military Aviation Engeneering Academy of the Soviet Air Forces and joined Soviet Air Defence Forces</li>
+      <li><strong class="strong">early 1970s</strong> - assigned to the organization that oversaw the new early warning system for ballistic missiles from NATO countries</li>
+      <li class="incident"><strong class="strong incident">1983</strong> - The early warning system indicates that upto six missiles from the US are headed towards Russia. Nuclear retaliation requires that multiple sources confirm the attack. Petrov is one of those and declares the system's indication a false alarm. </li>
+      <li><strong class="strong">1984</strong> - retires early from military and starts to work for the research institute responsible for the early warning system</li>
+      <li><strong class="strong">1998</strong> - his report of the incident is made public</li>
+      <li><strong class="strong">2007 </strong> - in May 2007 Petrov toured the Minuteman Missile National Historic Site for the documentary "The Man Who Saved the World"</li>
+      <li><strong class="strong">2017 </strong> - on 19 May Petrov dies from hypostatic pneumonia</li>
+    </ul>
+  <p>If you want to learn more about Stanislav Petrov click <a target="_blank" id="tribute-link" href="https://en.wikipedia.org/wiki/Stanislav_Petrov">here</a> and if you want to learn more about the 1983 Soviet nuclear false alarm incident click <a target="_blank" href="https://en.wikipedia.org/wiki/1983_Soviet_nuclear_false_alarm_incident">here</a>.</p>
+    </main>
+  </body>
+
+</html>
